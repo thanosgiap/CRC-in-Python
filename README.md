@@ -9,4 +9,4 @@ Afterwards the CRC algorithm is being applied to each one of the messages. <br>
 Lastly the output of the program containts the messages transmited, the number of them that the algorithm detected as altered as well as
 the number of them that it didnt manage to detect.
 
-
+![](/photos/img.png)
