@@ -108,5 +108,4 @@ def main():
           "\u001b[32m(", ((errorMessages - foundError) / errorMessages) * 100, "%)\u001b[0m")
 
 
-if __name__ == "__main__":
-    main()
+
