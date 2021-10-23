@@ -5,10 +5,12 @@ import Utilities
 large_font = ('Verdana', 30)
 messagesToTransmit = 100000
 
+
+
 if __name__ == "__main__":
     # Window
     root = Tk()
-    root.title("Gui")
+    root.title("Cycle Redundancy Check")
 
     root.geometry("1000x1000")
     rootWidth = 1000
