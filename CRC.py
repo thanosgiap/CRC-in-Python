@@ -79,33 +79,5 @@ def messageCreation(k, P):
     return finalMessage
 
 
-def main():
-    errorMessages = 0
-    foundError = 0
-    messagesToTransmit = 100000
-
-    print("Please enter the number of bits: ")
-    k = int(input())
-
-    print("Please enter the P message: ")
-    P = [int(i) for i in str(input())]
-
-    print("Please enter the Bit Error Rate(BER): ")
-    ber = float(input())
-
-    # Repeating the process for the desired number of messages we would like to sent
-    for i in range(messagesToTransmit):
-        finalMessage = messageCreation(k, P)
-        alteredMessage, errorMessages = messageWithNoise(finalMessage, ber, errorMessages)
-        foundError = CRC_check(alteredMessage, P, foundError)
-
-    print("Transmitted messages: ", messagesToTransmit)
-    print("Messages with errors: ", errorMessages, "out of", messagesToTransmit, "\u001b[32m(",
-          (errorMessages / messagesToTransmit) * 100, "%)\u001b[0m")
-    print("Messages with errors spotted by the CRC: ", foundError, "out of", errorMessages, "\u001b[32m(",
-          (foundError / errorMessages) * 100, "%)\u001b[0m")
-    print("Messages with errors not spotted by the CRC: ", errorMessages - foundError, "out of", errorMessages,
-          "\u001b[32m(", ((errorMessages - foundError) / errorMessages) * 100, "%)\u001b[0m")
-
 
 
